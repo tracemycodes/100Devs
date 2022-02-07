@@ -7,10 +7,6 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
-h1,
-h2 {
-  text-align: left;
-}
 h2 {
   font-size: 1rem;
   margin: unset;
