@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serf;
+}
+header {
+  background-color: white;
+}
+nav {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+}
+
+.navText {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 550;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+}
+.navListItem {
+  margin-left: 2rem;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+}
+.navList,
+a {
+  text-decoration: none;
+  color: black;
+}
+.navIcon {
+  border: 2px solid yellow;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+}
+.naviconItem {
+}
+.bookings {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+}
+#home {
+  position: relative;
+}
+
+#home::before {
+  position: absolute;
+  content: "";
+  background-image: url(https://i.ibb.co/tPCRMw5/hair-salon-banner.jpg);
+  height: 650px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 100px;
+  transform: skewY(5deg);
+  transform-origin: right bottom;
+  z-index: -1;
+}
+.homeText {
+  padding-top: 5rem;
+  max-width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.homeHeader {
+  width: 90%;
+  font-size: 100px;
+  font-weight: lighter;
+  line-height: 6.5rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.homeParagraph {
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  padding-top: 0.2rem;
+}
+.homeButton {
+  border: none;
+  padding: 12px 40px;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
+.openings {
+  transform: rotate(90deg);
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 17px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.homeCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: auto;
+}
+.BookingsCard {
+  color: white;
+  background: black;
+  margin-top: 4rem;
+}
+.firstVisit {
+  border-left: 3px solid white;
+  margin: 1rem 0 0 0;
+  padding: 1rem 1rem 1rem 2rem;
+  text-transform: uppercase;
+}
+.forTheFirst {
+  padding: 0.1rem 1.8rem 0.5rem 2rem;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+#hairColouring {
+  margin-top: 0.7rem;
+}
+.percentage {
+  font-weight: lighter;
+  margin-right: 0.2rem;
+  font-size: 30px;
+}
+.cardButton {
+  border: none;
+  padding: 12px 30px;
+  color: black;
+  background: white;
+  text-transform: uppercase;
+  margin: 1.5rem 0 2rem 2rem;
+}
+.cardslider {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: row;
+}
+.prevKey,
+.nextKey {
+  border: 2px solid red;
+  border: none;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: bolder;
+}
