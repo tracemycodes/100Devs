@@ -1,0 +1,29 @@
+/******************************************
+/* HOT GARBAGE - PLEASE DON'T MIMIC THIS CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+section {
+  border: 2px solid green;
+  width: 100%;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+#purple {
+  background: rgba(241, 63, 247, 1);
+}
+#green {
+  background: rgba(0, 253, 81, 1);
+}
+#blue {
+  background: rgba(0, 254, 255);
+}
