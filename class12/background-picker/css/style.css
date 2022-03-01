@@ -10,20 +10,105 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
-section {
+.grid-box {
   border: 2px solid green;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+article {
+  border: 2px solid yellow;
+  text-align: center;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-#purple {
-  background: rgba(241, 63, 247, 1);
+.pants-section {
+  background-position: center;
+  background-size: 1000%;
+  /* filter: blur(100%); */
+  /* filter: blur(0.1); */
+  /* transform: scale(2); */
 }
-#green {
-  background: rgba(0, 253, 81, 1);
+.card-img {
+  border: 2px solid magenta;
+  background-color: white;
+  border-radius: 1rem;
+  width: 80%;
+  max-width: 24rem;
+  height: 24rem;
+  margin: auto;
+  overflow: hidden;
+  /* margin-left: -5rem; */
 }
-#blue {
-  background: rgba(0, 254, 255);
+
+.pants-card,
+.shirts-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  border-radius: 1rem;
+  background-position: center;
+  background-size: cover;
+  transition: all ease-in 2s;
+}
+
+.pants-card:hover,
+.shirts-card:hover {
+  transform: scale(1.1);
+}
+
+.pants-card {
+  transform: translateY(100%);
+}
+.shirts-card {
+  transform: translateY(-100%);
+}
+
+.transistion-left {
+  transform: translateX(0%);
+}
+
+.transistion-right {
+  transform: translateX(0%);
+}
+
+.thumb-nail-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb-nail {
+  width: 5rem;
+  height: 5rem;
+  margin: 2rem 1rem;
+  border: 2px solid red;
+  border-radius: 5px;
+  position: relative;
+}
+
+.thumb-nail .hidden {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.678);
+  display: none;
+}
+
+.thumb-nail .opacity {
+  display: block;
+}
+
+.thumb-nail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
