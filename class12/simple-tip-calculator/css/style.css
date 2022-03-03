@@ -40,7 +40,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: white;
 }
 
@@ -82,8 +82,8 @@ label,
 input {
 }
 label img {
-  height: 1rem;
-  width: 1rem;
+  height: 0.7rem;
+  width: 0.7rem;
   margin: 0;
 }
 
@@ -134,7 +134,7 @@ button:active {
   background-color: hsl(183, 100%, 15%);
   border-radius: 10px;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
