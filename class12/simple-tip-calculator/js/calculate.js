@@ -1,7 +1,18 @@
 class Calculate {
-  constructor (bill, percentage, people) {
+  constructor(bill, custom, people) {
     this.bill = bill;
-    this.percentage = percentage;
     this.people = people;
+    this.custom = custom;
+    this.percentage;
+  }
+  getPercentageValue() {
+    let percentageValue;
+    percentageInput.addEventListener("click", (item) => {
+      if (item.target.classList.contains("tip-percentage")) {
+        percentageValue = item.target.textContent;
+      }
+      this.percentage = percentageValue;
+      // console.log(this.percentage);
+    });
   }
 }
