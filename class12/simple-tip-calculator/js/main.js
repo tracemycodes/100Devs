@@ -23,17 +23,10 @@ percentageInput.addEventListener("click", (item) => {
   }
 });
 
-personInput.addEventListener("input", () => {
-  if (Number(personInput.value) === 0) {
-  } else {
-    let solution = calculate.calculateTip();
-    ui.showCalculatedTip(solution);
-  }
-});
+
 
 customInput.addEventListener("input", () => {
-  console.log(customInput.value);
-  if (customInput.value === "") {
+  if (customInput.value == "") {
     return;
   } else {
     calculate.getPercentageValue(
@@ -46,6 +39,21 @@ customInput.addEventListener("input", () => {
     if (calculate.people != "" && calculate.bill != "") {
       ui.showCalculatedTip(solution);
     }
+  }
+});
+
+
+personInput.addEventListener("input", () => {
+  calculate.getPercentageValue(
+      customInput.value,
+      billInput.value,
+      personInput.value
+    );
+  if (Number(personInput.value) === 0) {
+  } else {
+    let solution = calculate.calculateTip();
+    console.log(solution);
+    ui.showCalculatedTip(solution);
   }
 });
 
