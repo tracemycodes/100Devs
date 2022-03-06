@@ -1,18 +1,24 @@
 class Calculate {
-  constructor(bill, custom, people) {
-    this.bill = bill;
-    this.people = people;
-    this.custom = custom;
+  constructor() {
+    this.bill;
+    this.people;
     this.percentage;
   }
-  getPercentageValue() {
-    let percentageValue;
-    percentageInput.addEventListener("click", (item) => {
-      if (item.target.classList.contains("tip-percentage")) {
-        percentageValue = item.target.textContent;
-      }
-      this.percentage = percentageValue;
-      // console.log(this.percentage);
-    });
+  getPercentageValue(percentageInput, bill, people) {
+    this.percentage = percentageInput;
+    this.people = people;
+    this.bill = bill;
+  }
+  
+  calculateTip() {
+    let amount = parseInt(this.bill) / 100 * parseInt(this.percentage),
+        tipAmount = amount + parseInt(this.bill),
+        tipPerPerson = amount / parseInt(this.people),
+        amountPerPerson = tipAmount / parseInt(this.people);
+
+    return {
+      tipPerPerson,
+      amountPerPerson
+    };
   }
 }
