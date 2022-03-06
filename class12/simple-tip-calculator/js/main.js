@@ -4,6 +4,7 @@ const percentageInput = document.querySelector('.button-field');
 const customInput = document.querySelector('#btn-num');
 
 const calculate = new Calculate();
+const ui = new Ui();
 
 
 
@@ -14,18 +15,29 @@ percentageInput.addEventListener("click", (item) => {
     
     if (calculate.people != "" && calculate.bill != "") {
       let answer = calculate.calculateTip()
+      // console.log(answer);
     }
 
-    // console.log(calculate.bill);
   } 
 });
 
+personInput.addEventListener('input', () => {
+  console.log(typeof personInput.value);
+
+  if (Number(personInput.value) === 0) {
+    
+  } else {
+    let answer = calculate.calculateTip()
+  }
+
+})
+
+customInput.addEventListener('input', () => {
+  calculate.getPercentageValue(customInput.value, billInput.value, personInput.value);
+ 
+  if (calculate.people != "" && calculate.bill != "") {
+      let answer = calculate.calculateTip()
+  }
+})
 
 
-// personInput.addEventListener('input', rechout)
-
-// function rechout () {
-//   console.log("hello");
-// }
-
-// console.log(calculate);

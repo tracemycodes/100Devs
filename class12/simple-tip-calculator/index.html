@@ -19,21 +19,21 @@
             <label for="price">
               <img src="./img/icon-dollar.svg" alt="" />
             </label>
-            <input type="text" name="price" id="tip-price" />
+            <input type="number" name="price" id="tip-price" />
           </form>
           <h2>Select Tip %</h2>
           <div class="button-field">
-            <button class="tip-percentage">5%</button>
-            <button class="tip-percentage">10%</button>
-            <button class="tip-percentage">15%</button>
-            <button class="tip-percentage">25%</button>
-            <button class="tip-percentage">50%</button>
+            <button class="tip-percentage" value="5">5%</button>
+            <button class="tip-percentage" value="10">10%</button>
+            <button class="tip-percentage" value="15">15%</button>
+            <button class="tip-percentage" value="25">25%</button>
+            <button class="tip-percentage" value="50">50%</button>
             <button class="custom">
               <input
-                type="text"
+                type="number"
                 placeholder="Custom"
                 name="btn-num"
-                id="btn-num"
+                id="btn-num" min="0" max="100" step="5"
               />
             </button>
           </div>
@@ -42,7 +42,7 @@
             <label for="persons">
               <img src="./img/icon-person.svg" alt="" />
             </label>
-            <input type="text" name="persons" id="tip-person" />
+            <input type="number" name="persons" id="tip-person" placeholder="1" />
           </form>
         </article>
         <article class="gd-2">
@@ -65,6 +65,7 @@
       </section>
     </div>
     <script src="./js/calculate.js"></script>
+    <script src="./js/ui.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </htm
