@@ -145,7 +145,7 @@ button:active {
   display: flex;
   flex-direction: column;
 }
-.gd-2 > div {
+.gd-2 section > div {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -160,7 +160,7 @@ button:active {
   font-size: 1rem;
   margin-top: 0.3rem;
 }
-.gd-2 > div > p {
+.gd-2 section > div > p {
   margin: unset;
   font-size: 2rem;
   color: hsl(172, 67%, 45%);
@@ -170,14 +170,55 @@ button:active {
 
 .gd-2 button {
   width: 100%;
-  background-color: hsl(172, 67%, 45%);
-  color: hsl(183, 100%, 15%);
+  background-color: #26c0ab;
+  color: #00494d;
   margin-top: auto;
 }
 
 .gd-2 button:hover {
-  background-color: hsl(185, 78%, 82%);
+  background-color: #adeff5;
 }
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@keyframes spinner-div {
+  0% {
+    background: #adeff5;
+  }
+  12.5% {
+    background: #adeff5;
+  }
+  12.625% {
+    background: #26c0ab;
+  }
+  100% {
+    background: #26c0ab;
+  }
+}
+.spinner-div div {
+  position: absolute;
+  /* display: none; */
+  width: 18px;
+  height: 18px;
+  background: #26c0ab;
+  animation: spinner-div 1s linear infinite;
+}
+.loading-spinner-blocks {
+  width: 150px;
+  height: 150px;
+  display: none;
+  overflow: hidden;
+  background: none;
+}
+.spinner-div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  background-color: #00494d;
+}
+.spinner-div div {
+  box-sizing: content-box;
+}
