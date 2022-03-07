@@ -2,10 +2,20 @@ const billInput = document.querySelector("#tip-price"),
       personInput = document.querySelector("#tip-person"),
       percentageInput = document.querySelector(".button-field"),
       customInput = document.querySelector("#btn-num"),
-      restBtn = document.getElementById('reset-btn');
+      restBtn = document.getElementById('reset-btn'),
+      tipBtn = document.querySelectorAll('.tip-percentage');
 
 const calculate = new Calculate();
 const ui = new Ui();
+
+tipBtn.forEach((btn, index, btnArr) => {
+  btn.addEventListener('click', () => {
+    btnArr.forEach(btn => {
+      btn.classList.remove('active-btn')
+    })
+    btn.classList.add('active-btn')
+  })
+})
 
 percentageInput.addEventListener("click", (item) => {
   if (item.target.classList.contains("tip-percentage")) {
@@ -26,6 +36,7 @@ percentageInput.addEventListener("click", (item) => {
 
 
 customInput.addEventListener("input", () => {
+  tipBtn.forEach(btn => btn.classList.remove('active-btn'))
   if (customInput.value == "") {
     return;
   } else {
@@ -50,11 +61,20 @@ personInput.addEventListener("input", () => {
       personInput.value
     );
   if (Number(personInput.value) === 0) {
+    document.querySelector('.error-msg').style.display = 'block'
+    personInput.classList.add('error-value')
+    setTimeout(errorMsg, 2000)
   } else {
     let solution = calculate.calculateTip();
     console.log(solution);
     ui.showCalculatedTip(solution);
   }
 });
+
+
+function errorMsg () {
+  document.querySelector('.error-msg').style.display = 'none'
+  personInput.classList.remove('error-value')
+}
 
 restBtn.onclick = () => ui.resetUi(billInput, customInput, personInput);
