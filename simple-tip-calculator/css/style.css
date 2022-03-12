@@ -236,9 +236,10 @@ form .error-value:focus {
 .loading-spinner-blocks {
   width: 150px;
   height: 150px;
+  margin-left: 1.3rem;
   display: none;
   overflow: hidden;
-  background: none;
+  background: white;
 }
 .spinner-div {
   width: 100%;
@@ -250,5 +251,5 @@ form .error-value:focus {
   background-color: #00494d;
 }
 .spinner-div div {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
