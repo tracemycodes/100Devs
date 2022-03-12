@@ -19,6 +19,7 @@ tipBtn.forEach((btn, index, btnArr) => {
 
 percentageInput.addEventListener("click", (item) => {
   if (item.target.classList.contains("tip-percentage")) {
+    customInput.value = ""
     percentageValue = item.target.value;
     calculate.getPercentageValue(
       percentageValue,
