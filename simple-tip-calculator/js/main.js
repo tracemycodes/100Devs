@@ -1,25 +1,25 @@
 const billInput = document.querySelector("#tip-price"),
-      personInput = document.querySelector("#tip-person"),
-      percentageInput = document.querySelector(".button-field"),
-      customInput = document.querySelector("#btn-num"),
-      restBtn = document.getElementById('reset-btn'),
-      tipBtn = document.querySelectorAll('.tip-percentage');
+  personInput = document.querySelector("#tip-person"),
+  percentageInput = document.querySelector(".button-field"),
+  customInput = document.querySelector("#btn-num"),
+  resetBtn = document.getElementById("reset-btn"),
+  tipBtn = document.querySelectorAll(".tip-percentage");
 
 const calculate = new Calculate();
 const ui = new Ui();
 
 tipBtn.forEach((btn, index, btnArr) => {
-  btn.addEventListener('click', () => {
-    btnArr.forEach(btn => {
-      btn.classList.remove('active-btn')
-    })
-    btn.classList.add('active-btn')
-  })
-})
+  btn.addEventListener("click", () => {
+    btnArr.forEach((btn) => {
+      btn.classList.remove("active-btn");
+    });
+    btn.classList.add("active-btn");
+  });
+});
 
 percentageInput.addEventListener("click", (item) => {
   if (item.target.classList.contains("tip-percentage")) {
-    customInput.value = ""
+    customInput.value = "";
     percentageValue = item.target.value;
     calculate.getPercentageValue(
       percentageValue,
@@ -34,10 +34,8 @@ percentageInput.addEventListener("click", (item) => {
   }
 });
 
-
-
 customInput.addEventListener("input", () => {
-  tipBtn.forEach(btn => btn.classList.remove('active-btn'))
+  tipBtn.forEach((btn) => btn.classList.remove("active-btn"));
   if (customInput.value == "") {
     return;
   } else {
@@ -54,28 +52,30 @@ customInput.addEventListener("input", () => {
   }
 });
 
-
 personInput.addEventListener("input", () => {
   calculate.getPercentageValue(
-      customInput.value,
-      billInput.value,
-      personInput.value
-    );
+    customInput.value,
+    billInput.value,
+    personInput.value
+  );
   if (Number(personInput.value) === 0) {
-    document.querySelector('.error-msg').style.display = 'block'
-    personInput.classList.add('error-value')
-    setTimeout(errorMsg, 2000)
+    document.querySelector(".error-msg").style.display = "block";
+    personInput.classList.add("error-value");
+    setTimeout(errorMsg, 2000);
   } else {
-    let solution = calculate.calculateTip();
-    console.log(solution);
-    ui.showCalculatedTip(solution);
+    if (calculate.bill == "" || calculate.percentage == "") {
+      return alert("set amount and percentage value");
+    } else {
+      let solution = calculate.calculateTip();
+      ui.showCalculatedTip(solution);
+    }
   }
 });
 
-
-function errorMsg () {
-  document.querySelector('.error-msg').style.display = 'none'
-  personInput.classList.remove('error-value')
+function errorMsg() {
+  document.querySelector(".error-msg").style.display = "none";
+  personInput.classList.remove("error-value");
 }
 
-restBtn.onclick = () => ui.resetUi(billInput, customInput, personInput);
+resetBtn.onclick = () =>
+  ui.resetUi(billInput, customInput, personInput, tipBtn);
