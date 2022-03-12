@@ -1,0 +1,271 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  height: 38px;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+nav * {
+  float: left;
+  width: 10%;
+  color: white;
+  display: block;
+}
+nav img {
+  width: 100px;
+}
+
+nav ul {
+  width: 60%;
+  text-align: center;
+  align-items: center;
+}
+
+nav form input {
+  width: 180%;
+  padding: 6px;
+  margin-top: 5px;
+}
+.navListItem {
+  border-left: 1px solid rgb(82, 82, 82);
+  padding: 10px;
+}
+.navListItem a {
+  width: 100%;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+}
+.homeDetails {
+  float: left;
+  color: rgb(82, 82, 82);
+  font-weight: bolder;
+  padding: 8px;
+  font-size: 20px;
+}
+.homeDetails2 {
+  color: rgb(185, 175, 175);
+  float: right;
+  font-size: 18px;
+  padding: 8px;
+  font-weight: bolder;
+}
+#home {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.homeDisplay {
+  height: 55vh;
+  color: white;
+  clear: both;
+}
+.homeDisplayCard {
+  width: 50%;
+  position: relative;
+  float: left;
+  padding-right: 20px;
+  height: 100%;
+}
+.homeDisplayCard img {
+  width: 100%;
+  height: 100%;
+}
+
+.homeHeader {
+  position: absolute;
+  top: 100px;
+  padding-left: 15px;
+}
+
+h1 {
+  font-size: 23px;
+  margin-bottom: 4px;
+}
+.homeParagraph {
+  color: #d3d3d3;
+  font-size: 15px;
+  margin-right: 5.9375rem;
+  padding-bottom: 10px;
+}
+.homeParagraph2 {
+  color: rgb(228, 224, 224);
+  border-left: 2px solid red;
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+}
+.homeDisplayCard2 {
+  width: 50%;
+  float: right;
+  height: 100%;
+}
+.homeDisplay1 {
+  width: 50%;
+  float: left;
+  position: relative;
+  padding-right: 7px;
+  height: 100%;
+}
+.homefloatcard1 {
+  height: 50%;
+}
+#homeDisplayText {
+  position: absolute;
+  top: 40px;
+  padding-left: 15px;
+}
+.canadaAmerica,
+.covidVaccine,
+.onlineWork,
+.folkSinger {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+.canada,
+.workLife {
+  color: #d3d3d3;
+  border-left: 2px solid rgb(0, 183, 255);
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+}
+#homeDisplayText2 {
+  position: absolute;
+  top: 110px;
+  padding-left: 15px;
+  margin-right: 3rem;
+}
+.health {
+  color: rgb(228, 224, 224);
+  border-left: 2px solid red;
+  padding-left: 10px;
+}
+
+.homeDisplay1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.vaccine {
+  width: 50%;
+  float: right;
+  padding-left: 7px;
+  height: 100%;
+}
+.vaccine img {
+  width: 100%;
+  height: 100%;
+}
+.homefloatcard2 {
+  clear: both;
+  padding-top: 8px;
+  height: 50%;
+}
+#workLife {
+  width: 50%;
+  float: left;
+  padding-right: 7px;
+  height: 100%;
+}
+
+#workLife img {
+  width: 100%;
+  height: 100%;
+}
+.culture {
+  width: 50%;
+  float: right;
+  position: relative;
+  padding-left: 7px;
+  height: 100%;
+}
+.culture img {
+  width: 100%;
+  height: 100%;
+}
+#homeDisplayText3 {
+  position: absolute;
+  top: 230px;
+  padding-left: 15px;
+}
+#homeDisplayText4 {
+  position: absolute;
+  top: 25px;
+  padding-left: 15px;
+}
+.culture1 {
+  color: #836f6f;
+  border-left: 2px solid rgb(173, 169, 169);
+  padding-left: 10px;
+}
+
+#news {
+  height: 70vh;
+  margin-top: 2.5rem;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.newheader {
+  color: rgb(82, 82, 82);
+  border-left: 3px solid red;
+  padding-left: 10px;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.bbcNews {
+  display: inline-block;
+  width: 100%;
+}
+#newCard1 {
+  width: 32.3%;
+  float: left;
+}
+#newCard1 img {
+  width: 100%;
+  height: 50%;
+}
+#newCard2 {
+  width: 32.3%;
+  float: left;
+  margin: 0 1.5%;
+}
+#newCard2 img {
+  width: 100%;
+  height: 50%;
+}
+#newCard3 {
+  width: 32.3%;
+  float: right;
+}
+#newCard3 img {
+  width: 100%;
+  height: 50%;
+}
+.newsDescription {
+  color: #4a4a4a;
+  font-size: 16px;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.newsTitle {
+  color: rgb(82, 82, 82);
+  border-left: 3px solid red;
+  padding-left: 10px;
+  font-size: 15px;
+}
